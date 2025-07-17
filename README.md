@@ -22,8 +22,6 @@
 
 ## 📸 Screenshots
 
-## 📸 Screenshots
-
 | Home Screen | Drawer Menu | Journey Timer |
 | --- | --- | --- |
 | <img src="https://github.com/user-attachments/assets/7b32029c-01bd-4963-95dd-473a0c9ccfc3" width="120"/> | <img src="https://github.com/user-attachments/assets/28084445-b5c7-401a-aaee-20adb21539c8" width="120"/> | <img src="https://github.com/user-attachments/assets/f34a808e-5a1d-453a-bdb3-dd05b0d745ed" width="120"/> |
