@@ -20,51 +20,6 @@
 
 ---
 
-## 📦 Installation
-
-Make sure Flutter is installed on your system.
-
-### 1. Clone the repository:
-
-```bash
-git clone https://github.com/HarshitaJoshi123/SafeMate.git
-2. Navigate to the project folder:
-bash
-Copy
-Edit
-cd SafeMate
-3. Get the dependencies:
-bash
-Copy
-Edit
-flutter pub get
-4. Run the app:
-bash
-Copy
-Edit
-flutter run
-💡 Tech Stack
-Flutter & Dart
-
-Google Maps / Location
-
-SMS Integration
-
-Android SDK
-
-🔐 Permissions Required
-The app requires the following permissions:
-
-📍 Location access (for GPS tracking)
-
-📤 SMS sending (for SOS alerts)
-
-🌐 Internet access
-
-Make sure these permissions are enabled in AndroidManifest.xml.
-
 👩‍💻 Developer
 Made with ❤️ by Harshita Joshi
-🔗 GitHub Profile
-
 “Your safety in one tap – Stay aware. Stay Safe with SafeMate.”
