@@ -57,7 +57,7 @@
             <!-- Google Maps API Key -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyD5Rq-IVZKKjyAOYYmU5R-YkX9spjKLZs8" />
+            android:value="YOUR_API_KEY_HERE" />
     </application>
 
     <!-- ✅ Required for Android 11+ to detect apps like WhatsApp -->

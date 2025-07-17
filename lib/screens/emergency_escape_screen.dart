@@ -17,13 +17,14 @@ class _EmergencyEscapeScreenState extends State<EmergencyEscapeScreen> {
   GoogleMapController? _mapController;
   final Location _location = Location();
   LatLng? _currentLatLng;
-  final LatLng _safeLocation = const LatLng(28.6210, 77.0879); // Example Safe Location
+  final LatLng _safeLocation =
+      const LatLng(28.6210, 77.0879); // Example Safe Location
   final Set<Polyline> _polylines = {};
   final Set<Marker> _markers = {};
   final FlutterTts _tts = FlutterTts();
   String _distance = "";
   String _duration = "";
-  final String _apiKey = 'AIzaSyD5Rq-IVZKKjyAOYYmU5R-YkX9spjKLZs8'; // Replace with your API key
+  final String _apiKey = 'YOUR_API_KEY_HERE'; // Replace with your API key
 
   @override
   void initState() {
@@ -36,7 +37,8 @@ class _EmergencyEscapeScreenState extends State<EmergencyEscapeScreen> {
     if (permission != PermissionStatus.granted) return;
 
     final currentLocation = await _location.getLocation();
-    _currentLatLng = LatLng(currentLocation.latitude!, currentLocation.longitude!);
+    _currentLatLng =
+        LatLng(currentLocation.latitude!, currentLocation.longitude!);
 
     _addSafeMarker();
     _drawSafeRoute();
@@ -80,7 +82,8 @@ class _EmergencyEscapeScreenState extends State<EmergencyEscapeScreen> {
         _distance = legs['distance']['text'];
         _duration = legs['duration']['text'];
 
-        List<PointLatLng> decodedPoints = PolylinePoints().decodePolyline(points);
+        List<PointLatLng> decodedPoints =
+            PolylinePoints().decodePolyline(points);
 
         List<LatLng> polylineCoordinates =
             decodedPoints.map((e) => LatLng(e.latitude, e.longitude)).toList();
@@ -125,7 +128,8 @@ class _EmergencyEscapeScreenState extends State<EmergencyEscapeScreen> {
         title: const Text("Emergency Escape"),
         backgroundColor: Colors.redAccent,
         elevation: 0, // Removes shadow under the app bar
-        iconTheme: const IconThemeData(color: Colors.white), // Ensure icons are visible
+        iconTheme: const IconThemeData(
+            color: Colors.white), // Ensure icons are visible
       ),
       body: _currentLatLng == null
           ? const Center(child: CircularProgressIndicator())
@@ -139,7 +143,8 @@ class _EmergencyEscapeScreenState extends State<EmergencyEscapeScreen> {
                   markers: _markers,
                   polylines: _polylines,
                   myLocationEnabled: true,
-                  myLocationButtonEnabled: false, // Hide default button, use custom
+                  myLocationButtonEnabled:
+                      false, // Hide default button, use custom
                   onMapCreated: (controller) => _mapController = controller,
                 ),
                 // Custom My Location Button
@@ -174,10 +179,12 @@ class _EmergencyEscapeScreenState extends State<EmergencyEscapeScreen> {
                       children: [
                         Row(
                           children: [
-                            const Icon(Icons.directions_walk, color: Colors.redAccent),
+                            const Icon(Icons.directions_walk,
+                                color: Colors.redAccent),
                             const SizedBox(width: 8),
                             Text("Distance: $_distance",
-                                style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500)),
+                                style: const TextStyle(
+                                    fontSize: 16, fontWeight: FontWeight.w500)),
                           ],
                         ),
                         Row(
@@ -185,7 +192,8 @@ class _EmergencyEscapeScreenState extends State<EmergencyEscapeScreen> {
                             const Icon(Icons.timer, color: Colors.redAccent),
                             const SizedBox(width: 8),
                             Text("ETA: $_duration",
-                                style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500)),
+                                style: const TextStyle(
+                                    fontSize: 16, fontWeight: FontWeight.w500)),
                           ],
                         ),
                         const SizedBox(height: 5),
@@ -213,7 +221,8 @@ class _EmergencyEscapeScreenState extends State<EmergencyEscapeScreen> {
                         backgroundColor: Colors.red,
                         foregroundColor: Colors.white,
                         padding: const EdgeInsets.symmetric(vertical: 16),
-                        textStyle: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                        textStyle: const TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.bold),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(12),
                         ),
